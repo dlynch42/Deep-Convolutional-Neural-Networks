@@ -11,9 +11,9 @@ import tensorflow._api.v2.compat.v1 as tf
 def load_mnist(path, kind='train'):
     """Load MNIST Data from 'path'"""
     labels_path = os.path.join(path,
-                               '%s-labels-idx1-ubyte' % kind)
+                               '%s-labels.idx1-ubyte' % kind)
     images_path = os.path.join(path,
-                               '%s-images-idx3-ubyte' % kind)
+                               '%s-images.idx3-ubyte' % kind)
 
     with open(labels_path, 'rb') as lbpath:
         magic, n = struct.unpack('>II',
